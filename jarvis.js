@@ -71,7 +71,7 @@ let recognition = new SpeechRecognition();
     else if(message.includes(`${'open whatsapp'}`)){
         message = message.split(" ");
         console.log(message.length);
-        window.open(`com.${message[message.length-1]}`),"_blank";
+        window.open(`https://wa.me`),"_blank";
         speak(`opening${message[message.length-1]}`)
     }
     else if(message.includes(`${'open instagram'}`)){
