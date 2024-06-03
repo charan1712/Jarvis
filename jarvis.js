@@ -62,30 +62,6 @@ let recognition = new SpeechRecognition();
         window.open(`https://www.google.com/search?q=${message.replace(" ","+")}`),"_blank"
         speak("This is What i found on Internet")
     }
-    else if(message.includes(`${'open youtube'}`)){
-        message = message.split(" ");
-        console.log(message.length);
-        window.open(`com.google.android.${message[message.length-1]}`),"_blank";
-        speak(`opening${message[message.length-1]}`)
-    }
-    else if(message.includes(`${'open whatsapp'}`)){
-        message = message.split(" ");
-        console.log(message.length);
-        window.open(`https://wa.me`),"_blank";
-        speak(`opening${message[message.length-1]}`)
-    }
-    else if(message.includes(`${'open instagram'}`)){
-        message = message.split(" ");
-        console.log(message.length);
-        window.open(`com.${message[message.length-1]}.android.`),"_blank";
-        speak(`opening${message[message.length-1]}`)
-    }
-    else if(message.includes(`${'open bgmi'}`)){
-        message = message.split(" ");
-        console.log(message.length);
-        window.open(`com.pubg,imobile`),"_blank";
-        speak(`opening${message[message.length-1]}`)
-    }
     else if(message.includes(`${message}`)){
         message = message.split(" ");
         console.log(message.length);
