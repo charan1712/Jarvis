@@ -11,7 +11,7 @@ function speak(text){
 
 function wishMe(){
     const day = new Date();
-    var hour = day.getHours();
+    var hour = day.getHours();  
     if(hour>=0 && hour<=12){
         speak("Good Morning Sir")
     }
@@ -57,6 +57,16 @@ let recognition = new SpeechRecognition();
             window.open('Calculator')
             speak('opening Calculator')
         }
+        else if(message.includes('time'))
+            {
+                const time = new Date().toLocaleString(undefined, {hour: "numeric", minute: "numeric",})
+                speak(time)
+            }
+            else if(message.includes('date'))
+                {
+                    const date = new Date().toLocaleString(undefined,{month: "short" , day: "numeric"})
+                    speak(date)
+                }
     
     else if(message.includes("what is") || message.includes("who is") || message.includes("where is") || message.includes("about")){
         window.open(`https://www.google.com/search?q=${message.replace(" ","+")}`),"_blank"
